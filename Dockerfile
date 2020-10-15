@@ -1,6 +1,6 @@
 FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
 
-LABEL opensciencegrid.name="TensorFlow GPU"
+LABEL opensciencegrid.name="TensorFlow2 GPU"
 LABEL opensciencegrid.description="TensorFlow image with GPU support"
 LABEL opensciencegrid.url="https://www.tensorflow.org/"
 LABEL opensciencegrid.category="Tools"
@@ -126,6 +126,7 @@ RUN python3 -m pip --no-cache-dir install \
 
 # Install TensorFlow GPU version.
 RUN python3 -m pip install --upgrade tensorflow==2.3 keras
+RUN python3 -m pip install --upgrade tensorflow_addons==0.8.3
 
 #############################
 
