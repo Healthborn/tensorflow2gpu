@@ -125,6 +125,7 @@ RUN python3 -m pip --no-cache-dir install \
     python3 -m ipykernel.kernelspec
 
 # Install TensorFlow GPU version.
+RUN echo "Install tensorflow and tensorflow_addons"
 RUN python3 -m pip install --upgrade tensorflow==2.3 keras
 RUN python3 -m pip install --upgrade tensorflow_addons==0.8.3
 
